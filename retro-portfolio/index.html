@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-layout">
+        <!-- Left Game Sidebar (Snake) -->
+        <aside class="game-sidebar left-sidebar">
+            <div class="game-card shadow-box">
+                <div class="game-header">
+                    <h3>DATA SNAKE</h3>
+                    <span class="score-badge shadow-box">SCORE: <span id="snake-score">0</span></span>
+                </div>
+                <canvas id="snake-game" width="300" height="300" class="shadow-box"></canvas>
+                <div class="game-controls">
+                    <p>Use Arrow Keys to play.</p>
+                    <button id="start-snake" class="game-btn shadow-box">START</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main App Area -->
+        <main class="app-container">
+            <!-- Header Banner -->
+            <header class="hero-card shadow-box">
+                <div class="hero-badge">5+ YRS - EXPERIENCE</div>
+                <h1 class="hero-title">DATA ENGINEER</h1>
+                <div class="hero-subtitle-box">
+                    <span class="hero-subtitle">VAMSI KRISHNA</span>
+                </div>
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=vamsi" alt="Avatar" class="avatar shadow-box">
+            </header>
+
+            <!-- Navigation -->
+            <nav class="nav-bar shadow-box">
+                <a href="#" class="nav-link active" data-target="home">HOME</a>
+                <a href="#" class="nav-link" data-target="skills">SKILLS</a>
+                <a href="#" class="nav-link" data-target="projects">PROJECTS</a>
+                <a href="#" class="nav-link" data-target="contact">CONTACT</a>
+            </nav>
+
+            <!-- SECTION: HOME -->
+            <div id="section-home" class="content-section active">
+                <section class="progress-card shadow-box">
+                    <h2 class="section-label">YOUR ENGINEER</h2>
+                    <div class="progress-stats">
+                        <span class="big-number">5</span>
+                        <span class="stat-text">of 5+ years building scalable pipelines</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="progress-markers">
+                        <div class="marker">
+                            <span class="dot green"></span>
+                            <span>PYTHON</span>
+                        </div>
+                        <div class="marker">
+                            <span class="dot orange"></span>
+                            <span>SQL</span>
+                        </div>
+                        <div class="marker">
+                            <span class="dot white"></span>
+                            <span>SPARK</span>
+                        </div>
+                    </div>
+                </section>
+                <div class="retro-msg shadow-box">
+                    <p><strong>STATUS:</strong> READY FOR CHALLENGES.</p>
+                </div>
+            </div>
+
+            <!-- SECTION: SKILLS -->
+            <div id="section-skills" class="content-section" style="display: none;">
+                <!-- Categories -->
+                <div class="category-tabs">
+                    <button class="category-btn shadow-box active" data-filter="all">ALL</button>
+                    <button class="category-btn shadow-box" data-filter="etl">ETL</button>
+                    <button class="category-btn shadow-box" data-filter="cloud">CLOUD</button>
+                    <button class="category-btn shadow-box" data-filter="streaming">STREAMING</button>
+                    <button class="category-btn shadow-box" data-filter="bigdata">BIG DATA</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <section class="skills-section">
+                    <div class="skills-header">
+                        <span class="skills-count shadow-box" id="active-skill-count">9</span>
+                        <h3>Tech Stack</h3>
+                        <span class="skills-tag shadow-box">IN PROGRESS</span>
+                        <div class="mini-progress"><div class="mini-bar"></div></div>
+                        <span class="fraction">8/10</span>
+                    </div>
+
+                    <div class="skills-grid" id="skills-grid">
+                        <div class="skill-card shadow-box green-bg" data-category="etl bigdata">
+                            <span class="star">☆</span><span class="num">1</span>
+                            <div class="skill-name">Python</div><div class="skill-symbol">Py</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span></div>
+                        </div>
+                        <div class="skill-card shadow-box" data-category="etl bigdata">
+                            <span class="star">☆</span><span class="num">2</span>
+                            <div class="skill-name">SQL</div><div class="skill-symbol">DB</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar"></span></div>
+                        </div>
+                        <div class="skill-card shadow-box" data-category="bigdata etl">
+                            <span class="star">☆</span><span class="num">3</span>
+                            <div class="skill-name">Apache Spark</div><div class="skill-symbol">Sp</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar"></span></div>
+                        </div>
+                        <div class="skill-card shadow-box" data-category="cloud">
+                            <span class="star">☆</span><span class="num">4</span>
+                            <div class="skill-name">AWS</div><div class="skill-symbol">☁️</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar"></span></div>
+                        </div>
+                        <div class="skill-card shadow-box" data-category="cloud">
+                            <span class="star">☆</span><span class="num">5</span>
+                            <div class="skill-name">GCP</div><div class="skill-symbol">☁️</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar"></span><span class="bar"></span></div>
+                        </div>
+                        <div class="skill-card shadow-box" data-category="etl">
+                            <span class="star">☆</span><span class="num">6</span>
+                            <div class="skill-name">Airflow</div><div class="skill-symbol">Af</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar"></span><span class="bar"></span></div>
+                        </div>
+                        <div class="skill-card shadow-box" data-category="streaming">
+                            <span class="star">☆</span><span class="num">7</span>
+                            <div class="skill-name">Kafka</div><div class="skill-symbol">Kf</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar"></span><span class="bar"></span></div>
+                        </div>
+                        <div class="skill-card shadow-box" data-category="cloud bigdata">
+                            <span class="star">☆</span><span class="num">8</span>
+                            <div class="skill-name">Snowflake</div><div class="skill-symbol">Sn</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar"></span><span class="bar"></span></div>
+                        </div>
+                        <div class="skill-card shadow-box green-bg" data-category="cloud">
+                            <span class="star">☆</span><span class="num">9</span>
+                            <div class="skill-name">Docker</div><div class="skill-symbol">Dk</div>
+                            <div class="level-bars"><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar active"></span><span class="bar"></span></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SECTION: PROJECTS -->
+            <div id="section-projects" class="content-section" style="display: none;">
+                <div class="project-list">
+                    <div class="project-card shadow-box">
+                        <div class="proj-header">
+                            <h3>PIPELINE ORCHESTRATOR</h3>
+                            <span class="proj-badge shadow-box">ETL</span>
+                        </div>
+                        <p>Automated complex data flows with Airflow and Spark, reducing processing time by 40%.</p>
+                    </div>
+                    <div class="project-card shadow-box">
+                        <div class="proj-header">
+                            <h3>REAL-TIME STREAMER</h3>
+                            <span class="proj-badge shadow-box">KAFKA</span>
+                        </div>
+                        <p>Processed millions of events per second via Kafka & Flink for real-time analytics.</p>
+                    </div>
+                    <div class="project-card shadow-box">
+                        <div class="proj-header">
+                            <h3>DATA LAKEHOUSE</h3>
+                            <span class="proj-badge shadow-box">GCP/AWS</span>
+                        </div>
+                        <p>Scalable storage and compute architecture migrating on-prem data to the cloud.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: CONTACT -->
+            <div id="section-contact" class="content-section" style="display: none;">
+                <form id="contact-form" class="retro-form shadow-box">
+                    <h2 class="form-title">INITIATE CONTACT</h2>
+                    <div class="form-group">
+                        <label>USER ID [NAME]</label>
+                        <input type="text" class="shadow-box" required>
+                    </div>
+                    <div class="form-group">
+                        <label>COMM LINK [EMAIL]</label>
+                        <input type="email" class="shadow-box" required>
+                    </div>
+                    <div class="form-group">
+                        <label>DATA PACKET [MSG]</label>
+                        <textarea class="shadow-box" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn shadow-box">TRANSMIT</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- Right Game Sidebar (Tic-Tac-Toe) -->
+        <aside class="game-sidebar right-sidebar">
+            <div class="game-card shadow-box">
+                <div class="game-header">
+                    <h3>TIC-TAC-TOE</h3>
+                    <span class="score-badge shadow-box" id="ttt-status">P1 TURN</span>
+                </div>
+                <div id="ttt-board" class="shadow-box">
+                    <div class="ttt-cell" data-index="0"></div>
+                    <div class="ttt-cell" data-index="1"></div>
+                    <div class="ttt-cell" data-index="2"></div>
+                    <div class="ttt-cell" data-index="3"></div>
+                    <div class="ttt-cell" data-index="4"></div>
+                    <div class="ttt-cell" data-index="5"></div>
+                    <div class="ttt-cell" data-index="6"></div>
+                    <div class="ttt-cell" data-index="7"></div>
+                    <div class="ttt-cell" data-index="8"></div>
+                </div>
+                <div class="game-controls">
+                    <p>Play against local.</p>
+                    <button id="reset-ttt" class="game-btn shadow-box">RESET</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
